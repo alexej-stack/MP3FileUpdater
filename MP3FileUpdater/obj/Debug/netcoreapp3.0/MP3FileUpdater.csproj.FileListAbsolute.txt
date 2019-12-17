@@ -1,0 +1,7 @@
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3FileUpdater\bin\Debug\netcoreapp3.0\MP3FileUpdater.deps.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3FileUpdater\bin\Debug\netcoreapp3.0\MP3FileUpdater.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3FileUpdater\obj\Debug\netcoreapp3.0\MP3FileUpdater.AssemblyInfoInputs.cache
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3FileUpdater\obj\Debug\netcoreapp3.0\MP3FileUpdater.AssemblyInfo.cs
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3FileUpdater\bin\Debug\netcoreapp3.0\MP3FileUpdater.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3FileUpdater\obj\Debug\netcoreapp3.0\MP3FileUpdater.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3FileUpdater\obj\Debug\netcoreapp3.0\MP3FileUpdater.pdb

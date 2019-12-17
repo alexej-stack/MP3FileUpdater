@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "AsyncAwaitBestPractices/4.0.0-pre3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/AsyncAwaitBestPractices.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/AsyncAwaitBestPractices.dll": {}
+        }
+      },
+      "AsyncAwaitBestPractices.MVVM/4.0.0-pre3": {
+        "type": "package",
+        "dependencies": {
+          "AsyncAwaitBestPractices": "4.0.0-pre3"
+        },
+        "compile": {
+          "lib/netstandard1.0/AsyncAwaitBestPractices.MVVM.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/AsyncAwaitBestPractices.MVVM.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AsyncAwaitBestPractices/4.0.0-pre3": {
+      "sha512": "5g11m6ns2BS0NxZReuoR5Qzl67VPgB1syR6QqvUAh19VkGBjohz5M2TsFYskyCAdycGtueCJmiGlFUMeWnDGqQ==",
+      "type": "package",
+      "path": "asyncawaitbestpractices/4.0.0-pre3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "asyncawaitbestpractices.4.0.0-pre3.nupkg.sha512",
+        "asyncawaitbestpractices.nuspec",
+        "lib/netstandard1.0/AsyncAwaitBestPractices.dll",
+        "lib/netstandard1.0/AsyncAwaitBestPractices.pdb",
+        "lib/netstandard1.0/AsyncAwaitBestPractices.xml"
+      ]
+    },
+    "AsyncAwaitBestPractices.MVVM/4.0.0-pre3": {
+      "sha512": "snLXl72qVJ/vQC3SFYqEXQXT78Pc/cEKKHhkMqDLc8tUS9VNTcDPgcF7hjDH2TumX0XIlD4H4jkABu0srCbKgg==",
+      "type": "package",
+      "path": "asyncawaitbestpractices.mvvm/4.0.0-pre3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "asyncawaitbestpractices.mvvm.4.0.0-pre3.nupkg.sha512",
+        "asyncawaitbestpractices.mvvm.nuspec",
+        "lib/netstandard1.0/AsyncAwaitBestPractices.MVVM.dll",
+        "lib/netstandard1.0/AsyncAwaitBestPractices.MVVM.pdb",
+        "lib/netstandard1.0/AsyncAwaitBestPractices.MVVM.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "AsyncAwaitBestPractices >= 4.0.0-pre3",
+      "AsyncAwaitBestPractices.MVVM >= 4.0.0-pre3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\alexejDosdov\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\WPF\\MP3FileUpdater.UI.WPF.Command\\MP3FileUpdater.UI.WPF.Command.csproj",
+      "projectName": "MP3FileUpdater.UI.WPF.Command",
+      "projectPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\WPF\\MP3FileUpdater.UI.WPF.Command\\MP3FileUpdater.UI.WPF.Command.csproj",
+      "packagesPath": "C:\\Users\\alexejDosdov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\WPF\\MP3FileUpdater.UI.WPF.Command\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\alexejDosdov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "dependencies": {
+          "AsyncAwaitBestPractices": {
+            "target": "Package",
+            "version": "[4.0.0-pre3, )"
+          },
+          "AsyncAwaitBestPractices.MVVM": {
+            "target": "Package",
+            "version": "[4.0.0-pre3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

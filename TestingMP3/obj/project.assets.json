@@ -1,0 +1,182 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "ID3/0.6.0": {
+        "type": "package",
+        "dependencies": {
+          "JetBrains.Annotations": "2018.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Id3.Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Id3.Net.dll": {}
+        }
+      },
+      "JetBrains.Annotations/2018.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {}
+        }
+      },
+      "TagLibSharp/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/TagLibSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/TagLibSharp.dll": {}
+        }
+      },
+      "MP3FileUpdater.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "ID3": "0.6.0",
+          "TagLibSharp": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/MP3FileUpdater.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MP3FileUpdater.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ID3/0.6.0": {
+      "sha512": "7oHf3mjkeJp5xHAOqE0y9xxnFbJH7VifL1EHjRNHY6LiC2LeMERTTmEQBJXaqrIJ5KgehUkY5XhuskaPoanUqA==",
+      "type": "package",
+      "path": "id3/0.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "id3.0.6.0.nupkg.sha512",
+        "id3.nuspec",
+        "lib/net40/Id3.Net.dll",
+        "lib/net40/Id3.Net.xml",
+        "lib/netstandard2.0/Id3.Net.dll",
+        "lib/netstandard2.0/Id3.Net.xml"
+      ]
+    },
+    "JetBrains.Annotations/2018.3.0": {
+      "sha512": "Hbt5edAd7OfnYwsRayYguECzIJ4FUWDGjeEHsmxIgEpBbqZglhpxqjPWnWN/pEQM1HFGojMrR9dsywmC8pPTeQ==",
+      "type": "package",
+      "path": "jetbrains.annotations/2018.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jetbrains.annotations.2018.3.0.nupkg.sha512",
+        "jetbrains.annotations.nuspec",
+        "lib/net20/JetBrains.Annotations.dll",
+        "lib/net20/JetBrains.Annotations.xml",
+        "lib/netstandard1.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard1.0/JetBrains.Annotations.dll",
+        "lib/netstandard1.0/JetBrains.Annotations.xml",
+        "lib/netstandard2.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard2.0/JetBrains.Annotations.dll",
+        "lib/netstandard2.0/JetBrains.Annotations.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
+      ]
+    },
+    "TagLibSharp/2.2.0": {
+      "sha512": "X8UOWeaJgHGrN3xilg3O0lqowhUSwNEiGrE8ITDd1rCn14LqGCWKgn5GX++SW4vuXBMne8+pyic6aUvOFQMRlA==",
+      "type": "package",
+      "path": "taglibsharp/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/TagLibSharp.dll",
+        "lib/net45/TagLibSharp.pdb",
+        "lib/net45/TaglibSharp.xml",
+        "lib/netstandard2.0/TagLibSharp.dll",
+        "lib/netstandard2.0/TagLibSharp.pdb",
+        "lib/netstandard2.0/TaglibSharp.xml",
+        "taglibsharp.2.2.0.nupkg.sha512",
+        "taglibsharp.nuspec"
+      ]
+    },
+    "MP3FileUpdater.Core/1.0.0": {
+      "type": "project",
+      "path": "../MP3FileUpdater/MP3FileUpdater.Core.csproj",
+      "msbuildProject": "../MP3FileUpdater/MP3FileUpdater.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "MP3FileUpdater.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\alexejDosdov\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\TestingMP3\\TestingMP3.csproj",
+      "projectName": "TestingMP3",
+      "projectPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\TestingMP3\\TestingMP3.csproj",
+      "packagesPath": "C:\\Users\\alexejDosdov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\TestingMP3\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\alexejDosdov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\MP3FileUpdater\\MP3FileUpdater.Core.csproj": {
+              "projectPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\MP3FileUpdater\\MP3FileUpdater.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

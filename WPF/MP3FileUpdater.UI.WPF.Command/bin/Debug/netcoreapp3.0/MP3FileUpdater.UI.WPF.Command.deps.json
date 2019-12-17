@@ -1,0 +1,60 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "MP3FileUpdater.UI.WPF.Command/1.0.0": {
+        "dependencies": {
+          "AsyncAwaitBestPractices": "4.0.0-pre3",
+          "AsyncAwaitBestPractices.MVVM": "4.0.0-pre3"
+        },
+        "runtime": {
+          "MP3FileUpdater.UI.WPF.Command.dll": {}
+        }
+      },
+      "AsyncAwaitBestPractices/4.0.0-pre3": {
+        "runtime": {
+          "lib/netstandard1.0/AsyncAwaitBestPractices.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AsyncAwaitBestPractices.MVVM/4.0.0-pre3": {
+        "dependencies": {
+          "AsyncAwaitBestPractices": "4.0.0-pre3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/AsyncAwaitBestPractices.MVVM.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MP3FileUpdater.UI.WPF.Command/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AsyncAwaitBestPractices/4.0.0-pre3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5g11m6ns2BS0NxZReuoR5Qzl67VPgB1syR6QqvUAh19VkGBjohz5M2TsFYskyCAdycGtueCJmiGlFUMeWnDGqQ==",
+      "path": "asyncawaitbestpractices/4.0.0-pre3",
+      "hashPath": "asyncawaitbestpractices.4.0.0-pre3.nupkg.sha512"
+    },
+    "AsyncAwaitBestPractices.MVVM/4.0.0-pre3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-snLXl72qVJ/vQC3SFYqEXQXT78Pc/cEKKHhkMqDLc8tUS9VNTcDPgcF7hjDH2TumX0XIlD4H4jkABu0srCbKgg==",
+      "path": "asyncawaitbestpractices.mvvm/4.0.0-pre3",
+      "hashPath": "asyncawaitbestpractices.mvvm.4.0.0-pre3.nupkg.sha512"
+    }
+  }
+}

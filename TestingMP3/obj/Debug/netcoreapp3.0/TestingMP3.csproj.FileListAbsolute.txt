@@ -1,0 +1,17 @@
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\obj\Debug\netcoreapp3.0\TestingMP3.csprojAssemblyReference.cache
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\obj\Debug\netcoreapp3.0\TestingMP3.AssemblyInfoInputs.cache
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\obj\Debug\netcoreapp3.0\TestingMP3.AssemblyInfo.cs
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\TestingMP3.exe
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\TestingMP3.deps.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\TestingMP3.runtimeconfig.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\TestingMP3.runtimeconfig.dev.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\TestingMP3.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\TestingMP3.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\Id3.Net.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\JetBrains.Annotations.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\TagLibSharp.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\MP3FileUpdater.Core.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\bin\Debug\netcoreapp3.0\MP3FileUpdater.Core.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\obj\Debug\netcoreapp3.0\TestingMP3.csproj.CopyComplete
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\obj\Debug\netcoreapp3.0\TestingMP3.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\TestingMP3\obj\Debug\netcoreapp3.0\TestingMP3.pdb

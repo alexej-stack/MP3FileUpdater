@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+      <Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AsyncAwaitBestPractices" Version="4.0.0-pre3" />
+    <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="4.0.0-pre3" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.2-ci870" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.0.1-ci870" />
+    <PackageReference Include="Ookii.Dialogs" Version="1.0.0" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="1.1.0" />
+    <PackageReference Include="Prism.Core" Version="7.2.0.1422" />
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\MP3FileUpdater\MP3FileUpdater.Core.csproj" />
+    <ProjectReference Include="..\..\MP3Updater.UI.Console.Host\MP3Updater.UI.Console.Host.csproj" />
+    <ProjectReference Include="..\MP3FileUpdater.UI.WPF.Command\MP3FileUpdater.UI.WPF.Command.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
+
+</Project>
