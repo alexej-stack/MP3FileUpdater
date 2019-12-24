@@ -65,20 +65,33 @@
 
         <Grid Grid.Row="1"  ShowGridLines="True">
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto" MinHeight="31"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <ProgressBar   MinHeight="10" Minimum="0" 
+            <ProgressBar Grid.Row="0"  MinHeight="20" Minimum="0" 
                      Value="{Binding ProgressModel.Value}"
                      Maximum="1440"
                      IsIndeterminate="{Binding ProgressModel.IsIndeterminated}"/>
-            <Button  Grid.Column="1" Grid.Row="3" MinHeight="11" Margin="4" Command="{Binding TestCommand}">Het
-            </Button>
 
-            <ListBox Grid.Row="1"/>
-          
+
+            <ListBox Grid.Row="1" Name="dd"  ItemsSource="{Binding Path=ListBoxModels}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            
+
+                            <TextBlock  Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock  Text="{Binding Name}"  Grid.Column="1"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Grid>
-        
+
     </Grid>
 </Window>

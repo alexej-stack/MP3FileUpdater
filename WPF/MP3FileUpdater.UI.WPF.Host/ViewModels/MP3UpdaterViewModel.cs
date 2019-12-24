@@ -1,13 +1,12 @@
-﻿using Microsoft.Extensions.Logging;
-using Microsoft.WindowsAPICodePack.Dialogs;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
 using MP3FileUpdater.UI.WPF.Command;
 using MP3Updater.Core;
 using NLog;
 using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
 namespace MP3FileUpdater.UI.WPF.Host.ViewModels
@@ -24,7 +23,9 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
 
         private Mp3Directory _mp3Directory;
         private ProgressModel _progressModel;
-     
+
+        private ObservableCollection<ListBoxModel> _items = new ObservableCollection<ListBoxModel>();
+
         private bool _operationStarted;
 
         #region VMmodels        
@@ -36,14 +37,28 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
         /// </value>
         public ProgressModel ProgressModel
         {
-            get 
-            { 
+            get
+            {
                 return _progressModel;
             }
             set
             {
                 _progressModel = value;
                 OnPropertyChanged("ProgressModel");
+            }
+        }
+
+        public ObservableCollection<ListBoxModel> ListBoxModels
+        {
+            get
+            {
+                return _items;
+            }
+            set
+            {
+                _items = value;
+
+                OnPropertyChanged("ListBoxModel");
             }
         }
         /// <summary>
@@ -62,7 +77,7 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
             {
                 _sourcePath = value;
                 OnPropertyChanged();
-                
+
                 NotifyCommands();
             }
         }
@@ -86,7 +101,7 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
                 NotifyCommands();
             }
         }
-        #endregion        
+        #endregion
 
 
         /// <summary>
@@ -95,7 +110,7 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
         /// <value>
         /// The start operation command.
         /// </value>
-        
+
         public ICommand StartOperationCommand { get; }
         /// <summary>
         /// Gets the stop operation command.
@@ -169,7 +184,7 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
             {
                 _mp3Directory = new Mp3Directory(new System.IO.DirectoryInfo(SourcePath), new System.IO.DirectoryInfo(DestinationPath));
                 _logger.Debug("check procces status before begin {@ _progressModel.IsIndeterminated}", _progressModel.IsIndeterminated);
-            
+
                 lock (_lockObject)
                 {
                     _operationStarted = true;
@@ -177,17 +192,23 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
                 NotifyCommands();
 
                 var progress = new Progress<int>();
-                
+
                 progress.ProgressChanged += Progress_ProgressChanged;
-             
-                _mp3Directory.FilesSearchDone += (sender, args) => 
+
+                _mp3Directory.FilesSearchDone += (sender, args) =>
                 {
                     _progressModel.IsIndeterminated = false;
                     _logger.Debug("check procces status after begin {@ _progressModel.IsIndeterminated}", _progressModel.IsIndeterminated);
-                    _progressModel.FilesCount =args.FilesCount;
+                    _progressModel.FilesCount = args.FilesCount;
                     _logger.Debug("Fetchess files count {@_progressModel.FilesCount}", _progressModel.FilesCount);
                 };
-                
+                foreach (var filename in _mp3Directory.GetFileName())
+                {
+                    var id = 0;
+                    ListBoxModels.Add(new ListBoxModel() { Id = id, Name = filename });
+                    id++;
+                }
+
                 await _mp3Directory.Process(5, progress);
             }
             _logger.Trace("Start button ended");
@@ -267,6 +288,6 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
             }
         }
         #endregion
-       
+
     }
 }

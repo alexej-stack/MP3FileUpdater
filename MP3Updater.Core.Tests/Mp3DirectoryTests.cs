@@ -170,5 +170,16 @@ namespace MP3Updater.Core.Tests
             };
             Assert.IsTrue(FilesCount==0);
         }
+        [TestMethod]
+        public async Task Mp3DirectoryGetFilename()
+        {
+            var mp3Directory = new Mp3Directory(SourceDirectory, DestinationDirectory);
+            var progress = new Progress<int>(); 
+            
+            
+            await mp3Directory.Process(3, progress);
+            var t = mp3Directory.GetFileName();
+            Assert.IsTrue(t.ToArray().Length==0 );
+        }
     }
 }

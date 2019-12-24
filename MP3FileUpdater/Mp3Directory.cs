@@ -68,7 +68,7 @@ namespace MP3Updater.Core
         /// Gets all files.
         /// </summary>
         /// <param name="directoryInfo">The directory information.</param>
-        ///  <remarks>fetch all files from all directories and subdirectories from the path</remarks>
+        /// <remarks>fetch all files from all directories and subdirectories from the path</remarks>
         /// <returns>IEnumerable files collection</returns>
         public IEnumerable<FileInfo> GetAllFiles(DirectoryInfo directoryInfo)
         {
@@ -133,6 +133,23 @@ namespace MP3Updater.Core
                     }
                 });
             _logger.Trace("Stop Consumr working");
+
+        }
+        public IEnumerable<string> GetFileName()
+        {
+            while (!_collectionFiles.IsCompleted )
+            {
+                if (_collectionFiles.TryTake(out var fileInfo))
+                {
+                    var name = GetNewFileName(fileInfo);
+                    yield return name;
+
+                }
+                else
+                {
+                    yield return "end";
+                }
+            }
 
         }
         /// <summary>
