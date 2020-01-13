@@ -1,4 +1,5 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using MP3FileUpdater.Core;
 using MP3FileUpdater.UI.WPF.Command;
 using MP3Updater.Core;
 using NLog;
@@ -24,8 +25,9 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
         private Mp3Directory _mp3Directory;
         private ProgressModel _progressModel;
 
-        private ObservableCollection<ListBoxModel> _items = new ObservableCollection<ListBoxModel>();
-
+        private ObservableCollection<ProgressFiles> _items = new ObservableCollection<ProgressFiles>();
+       
+        DatabaseContext db = new DatabaseContext();
         private bool _operationStarted;
 
         #region VMmodels        
@@ -48,7 +50,7 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
             }
         }
 
-        public ObservableCollection<ListBoxModel> ListBoxModels
+        public ObservableCollection<ProgressFiles> ProgressFiles
         {
             get
             {
@@ -58,7 +60,7 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
             {
                 _items = value;
 
-                OnPropertyChanged("ListBoxModel");
+                OnPropertyChanged("ProgressFiles");
             }
         }
         /// <summary>
@@ -191,7 +193,7 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
                 }
                 NotifyCommands();
 
-                var progress = new Progress<int>();
+                var progress = new Progress<ProgressFiles>();
 
                 progress.ProgressChanged += Progress_ProgressChanged;
 
@@ -202,22 +204,21 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
                     _progressModel.FilesCount = args.FilesCount;
                     _logger.Debug("Fetchess files count {@_progressModel.FilesCount}", _progressModel.FilesCount);
                 };
-                foreach (var filename in _mp3Directory.GetFileName())
-                {
-                    var id = 0;
-                    ListBoxModels.Add(new ListBoxModel() { Id = id, Name = filename });
-                    id++;
-                }
+              
 
                 await _mp3Directory.Process(5, progress);
             }
             _logger.Trace("Start button ended");
         }
 
-        private void Progress_ProgressChanged(object sender, int e)
+        private void Progress_ProgressChanged(object sender, ProgressFiles e)
         {
+           
+            _progressModel.Value = e.ReadedFilesCount;
+            var progressFile = new ProgressFiles() { ReadedFilesCount = e.ReadedFilesCount, ReamainingFilesCount = e.ReamainingFilesCount, mp3File = e.mp3File };
+            ProgressFiles.Add(progressFile);
+          
 
-            _progressModel.Value = e;
         }
 
         private bool ValidatePathes()

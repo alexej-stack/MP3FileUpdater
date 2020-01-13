@@ -4,6 +4,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace MP3Updater.Core
         public DirectoryInfo DestinationDirectoryPath { get; }
         CancellationTokenSource source = new CancellationTokenSource();
         public int counter;
+        //private int id = 1;
         public int sourceCounter;
         private BlockingCollection<FileInfo> _collectionFiles;
         private static object _lockObject = new object();
@@ -108,7 +110,7 @@ namespace MP3Updater.Core
         /// <param name="progress">The progress value.</param>
         /// <param name="token">The cencel token.</param>
         /// <
-        public async Task Consumer(IProgress<int> progress, CancellationToken token)
+        public async Task Consumer(IProgress<ProgressFiles> progress, CancellationToken token)
         {
 
             _logger.Trace("Start Consumer working");
@@ -117,15 +119,23 @@ namespace MP3Updater.Core
                     while (!_collectionFiles.IsCompleted && !token.IsCancellationRequested)
                     {
 
-
+                    
                         if (_collectionFiles.TryTake(out var fileInfo))
                         {
                             SaveFile(fileInfo.FullName, Path.Combine(DestinationDirectoryPath.FullName, GetNewFileName(fileInfo)));
                             FileEventArgs args = new FileEventArgs(counter);
                             OnFilesSearchDone(this, args);
                             counter++;
-                            progress.Report(counter);
+                            var remainingFilesCount = GetAllFiles(SourceDirectoryPath).Count();
+                            var progressInfo = new ProgressFiles() { ReadedFilesCount = counter, ReamainingFilesCount =remainingFilesCount-counter, mp3File = new Mp3File() { Name = fileInfo.Name , Size=fileInfo.Length} };
+                            progress.Report(progressInfo);
+                           
 
+                            DatabaseContext db = new DatabaseContext();
+                            db.ProgressFiles.Add(progressInfo);
+                            
+                            db.SaveChanges();
+                          
                             _logger.Debug("Renamed files count {@counter}", counter);
 
                         }
@@ -158,7 +168,7 @@ namespace MP3Updater.Core
         /// <param name="maxThreads">The maximum threads.</param>
         /// <param name="progress">The progress.</param>
         /// <remarks>Rename all files from all directories and subdirectories from path. Format is size_oldname </remarks>
-        public async Task Process(int maxThreads, IProgress<int> progress)
+        public async Task Process(int maxThreads, IProgress<ProgressFiles> progress)
         {
             _logger.Trace("Start Procces working");
             CancellationToken token = source.Token;

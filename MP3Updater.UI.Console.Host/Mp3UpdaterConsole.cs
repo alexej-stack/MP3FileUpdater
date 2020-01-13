@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CommandLine;
 using CommandLine.Text;
 using Microsoft.Extensions.Logging;
+using MP3FileUpdater.Core;
 using MP3Updater;
 using MP3Updater.Core;
 using MP3Updater.Core.Tests;
@@ -38,7 +39,7 @@ public class Mp3UpdaterConsole
 
                }
            });
-        var progress = new Progress<int>();
+        var progress = new Progress<ProgressFiles>();
         var options = ((Parsed<ProgramArguments>)resOfParsing).Value;
 
 
@@ -54,7 +55,7 @@ public class Mp3UpdaterConsole
            
             Console.SetCursorPosition(0, 0);
             
-            Console.WriteLine("progress {0} from {1}", progressValue, SourceDirectoryLength);
+            Console.WriteLine("progress {0} from {1}", progressValue.ReadedFilesCount, progressValue.ReamainingFilesCount);
             
         };
 

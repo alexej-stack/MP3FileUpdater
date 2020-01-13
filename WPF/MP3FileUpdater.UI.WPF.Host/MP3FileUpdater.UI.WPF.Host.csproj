@@ -20,6 +20,12 @@
     <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="4.0.0-pre3" />
     <PackageReference Include="MaterialDesignColors" Version="1.2.2-ci870" />
     <PackageReference Include="MaterialDesignThemes" Version="3.0.1-ci870" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Ookii.Dialogs" Version="1.0.0" />
     <PackageReference Include="Ookii.Dialogs.Wpf" Version="1.1.0" />
     <PackageReference Include="Prism.Core" Version="7.2.0.1422" />

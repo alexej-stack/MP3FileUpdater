@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MP3FileUpdater.Core;
 using MP3Updater.Core;
 using MP3Updater.Core.Tests;
 using System;
@@ -17,7 +18,7 @@ namespace MP3Updater.UI.WPF.Tests
             
             mp3Directory.FilesSearchDone += async (sender, args) =>
             {
-                var progress = new Progress<int>();
+                var progress = new Progress<ProgressFiles>();
                 await mp3Directory.Process(5, progress);
                 var filescount = args.FilesCount;
                 Assert.IsTrue(filescount>0);

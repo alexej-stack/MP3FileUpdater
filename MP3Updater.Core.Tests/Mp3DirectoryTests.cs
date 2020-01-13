@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MP3FileUpdater.Core;
 using System;
 using System.IO;
 using System.Linq;
@@ -69,7 +70,7 @@ namespace MP3Updater.Core.Tests
         public async Task Mp3DirectoryStartProcessTest()
         {
             var maxThreads = 5;
-            var progress = new Progress<int>();
+            var progress = new Progress<ProgressFiles>();
             var progressPercentage = 0;
 
             var autoResetEvent = new AutoResetEvent(false);
@@ -79,7 +80,7 @@ namespace MP3Updater.Core.Tests
             {
                 lock (_lockObject)
                 {
-                    progressPercentage = progressValue;
+                    progressPercentage = progressValue.ReadedFilesCount;
                 }
 
                 autoResetEvent.Set();
@@ -103,7 +104,7 @@ namespace MP3Updater.Core.Tests
         {
             var mp3Directory = new Mp3Directory(SourceDirectory, DestinationDirectory);
             var maxThreads = 2;
-            var progress = new Progress<int>();
+            var progress = new Progress<ProgressFiles>();
             await mp3Directory.Process(maxThreads, progress);
             var sourceDirectorySize = mp3Directory.GetAllFiles(SourceDirectory).ToArray().Length;
             var destinationDirectorySize = mp3Directory.GetAllFiles(DestinationDirectory).ToArray().Length;
@@ -118,7 +119,7 @@ namespace MP3Updater.Core.Tests
         {
             var mp3Directory = new Mp3Directory(SourceDirectory, DestinationDirectory);
             var maxThreads = 2;
-            var progress = new Progress<int>();
+            var progress = new Progress<ProgressFiles>();
             var sourceDirectorySize = SourceDirectory.GetFiles().Length;
             await mp3Directory.Process(maxThreads, progress);
             var Mp3Counter = mp3Directory.counter;
@@ -174,12 +175,24 @@ namespace MP3Updater.Core.Tests
         public async Task Mp3DirectoryGetFilename()
         {
             var mp3Directory = new Mp3Directory(SourceDirectory, DestinationDirectory);
-            var progress = new Progress<int>(); 
-            
-            
+            var progress = new Progress<ProgressFiles>();
+
+
             await mp3Directory.Process(3, progress);
             var t = mp3Directory.GetFileName();
             Assert.IsTrue(t.ToArray().Length==0 );
         }
+
+        //[TestMethod]
+        //public async Task Mp3DirectoryProgressCheck()
+        //{
+        //    var mp3Directory = new Mp3Directory(SourceDirectory, DestinationDirectory);
+        //    var progress = new IProgress<ProgressFiles>();
+
+           
+        //    await mp3Directory.Process(3, progress);
+            
+        //    Assert.IsTrue(pro);
+        //}
     }
 }

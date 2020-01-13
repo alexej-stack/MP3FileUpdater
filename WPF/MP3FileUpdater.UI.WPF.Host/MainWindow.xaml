@@ -71,22 +71,24 @@
 
             <ProgressBar Grid.Row="0"  MinHeight="20" Minimum="0" 
                      Value="{Binding ProgressModel.Value}"
-                     Maximum="1440"
+                     Maximum="2400"
                      IsIndeterminate="{Binding ProgressModel.IsIndeterminated}"/>
 
 
-            <ListBox Grid.Row="1" Name="dd"  ItemsSource="{Binding Path=ListBoxModels}">
+            <ListBox Grid.Row="1"   ItemsSource="{Binding Path=ProgressFiles}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition/>
+                                <ColumnDefinition MinWidth="50" />
+                                <ColumnDefinition MinWidth="50" />
+                                <ColumnDefinition MinWidth="200" />
                             </Grid.ColumnDefinitions>
-                            
 
-                            <TextBlock  Text="{Binding Id}" Grid.Column="0"></TextBlock>
-                            <TextBlock  Text="{Binding Name}"  Grid.Column="1"></TextBlock>
+
+                            <TextBlock  Text="{Binding ReadedFilesCount}" Grid.Column="0"></TextBlock>
+                            <TextBlock  Text="{Binding ReamainingFilesCount}"  Grid.Column="1"></TextBlock>
+                            <TextBlock  Text="{Binding mp3File}"  Grid.Column="2"></TextBlock>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
