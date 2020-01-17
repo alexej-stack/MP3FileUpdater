@@ -1,0 +1,16 @@
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\NLog.config
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.deps.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\MP3FileUpdater.Core.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\MP3FileUpdater.Core.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.csprojAssemblyReference.cache
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.AssemblyInfoInputs.cache
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.AssemblyInfo.cs
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.csproj.CopyComplete
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.Memory\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.Memory.pdb

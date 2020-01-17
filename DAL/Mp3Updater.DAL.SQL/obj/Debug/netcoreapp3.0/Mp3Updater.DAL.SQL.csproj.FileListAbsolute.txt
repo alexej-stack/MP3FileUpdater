@@ -1,0 +1,13 @@
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.deps.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.runtimeconfig.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.runtimeconfig.dev.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\bin\Debug\netcoreapp3.0\Mp3Updater.DAL.pdb
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.csprojAssemblyReference.cache
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.AssemblyInfoInputs.cache
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.AssemblyInfo.cs
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.csproj.CopyComplete
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.dll
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\DAL\Mp3Updater.DAL.SQL\obj\Debug\netcoreapp3.0\Mp3Updater.DAL.SQL.pdb

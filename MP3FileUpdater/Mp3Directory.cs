@@ -16,6 +16,7 @@ namespace MP3Updater.Core
         static Logger _logger = LogManager.GetCurrentClassLogger();
         public DirectoryInfo SourceDirectoryPath { get; }
         public DirectoryInfo DestinationDirectoryPath { get; }
+        
         CancellationTokenSource source = new CancellationTokenSource();
         public int counter;
         //private int id = 1;
@@ -41,7 +42,9 @@ namespace MP3Updater.Core
         public Mp3Directory(DirectoryInfo sourceDirectoryPath, DirectoryInfo destinationDirectoryPath)
         {
             SourceDirectoryPath = sourceDirectoryPath ?? throw new System.ArgumentNullException(nameof(sourceDirectoryPath));
+
             _logger.Debug("SourcePath {@sourceDirectoryPath}", SourceDirectoryPath);
+
             DestinationDirectoryPath = destinationDirectoryPath ?? throw new System.ArgumentNullException(nameof(destinationDirectoryPath));
             _collectionFiles = new BlockingCollection<FileInfo>();
             _logger.Debug("DestinationPath {@destinationDirectoryPath}", DestinationDirectoryPath);
@@ -129,39 +132,24 @@ namespace MP3Updater.Core
                             var remainingFilesCount = GetAllFiles(SourceDirectoryPath).Count();
                             var progressInfo = new ProgressFiles() { ReadedFilesCount = counter, ReamainingFilesCount =remainingFilesCount-counter, mp3File = new Mp3File() { Name = fileInfo.Name , Size=fileInfo.Length} };
                             progress.Report(progressInfo);
-                           
 
-                            DatabaseContext db = new DatabaseContext();
-                            db.ProgressFiles.Add(progressInfo);
-                            
-                            db.SaveChanges();
-                          
+                            DatabaseContext databaseContext = new DatabaseContext();
+
+                            databaseContext.ProgressFiles.Add(progressInfo);
+                           
+                            databaseContext.SaveChanges();
+
+
                             _logger.Debug("Renamed files count {@counter}", counter);
 
                         }
-
+                       
                     }
                 });
             _logger.Trace("Stop Consumr working");
 
         }
-        public IEnumerable<string> GetFileName()
-        {
-            while (!_collectionFiles.IsCompleted )
-            {
-                if (_collectionFiles.TryTake(out var fileInfo))
-                {
-                    var name = GetNewFileName(fileInfo);
-                    yield return name;
-
-                }
-                else
-                {
-                    yield return "end";
-                }
-            }
-
-        }
+     
         /// <summary>
         /// Rename all files from all directories and subdirectories from path. Format is size_oldname.mp3 .
         /// </summary>

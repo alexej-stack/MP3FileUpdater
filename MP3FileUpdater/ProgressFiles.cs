@@ -39,13 +39,7 @@ namespace MP3FileUpdater.Core
         }
         
         public Mp3File mp3File { get; set; }
-
-        //public void Report(int readed)
-        //{
-        //    readedFiles = readed;
-        //}
-
-
+     
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {
