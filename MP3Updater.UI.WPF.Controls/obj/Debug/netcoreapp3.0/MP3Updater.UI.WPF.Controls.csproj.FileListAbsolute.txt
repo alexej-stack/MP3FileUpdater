@@ -6,3 +6,5 @@ C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3Updater.UI.WPF.Controls\obj
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3Updater.UI.WPF.Controls\obj\Debug\netcoreapp3.0\MP3Updater.UI.WPF.Controls.dll
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3Updater.UI.WPF.Controls\obj\Debug\netcoreapp3.0\MP3Updater.UI.WPF.Controls.pdb
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3Updater.UI.WPF.Controls\obj\Debug\netcoreapp3.0\MP3Updater.UI.WPF.Controls.csprojAssemblyReference.cache
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3Updater.UI.WPF.Controls\bin\Debug\netcoreapp3.0\MP3Updater.UI.WPF.Controls.runtimeconfig.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\MP3Updater.UI.WPF.Controls\bin\Debug\netcoreapp3.0\MP3Updater.UI.WPF.Controls.runtimeconfig.dev.json

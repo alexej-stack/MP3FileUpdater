@@ -2806,7 +2806,7 @@
           "AsyncAwaitBestPractices": "4.0.0-pre3",
           "AsyncAwaitBestPractices.MVVM": "4.0.0-pre3",
           "Microsoft.EntityFrameworkCore": "3.1.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0"
         },
         "compile": {
           "bin/placeholder/MP3FileUpdater.UI.WPF.Command.dll": {}
@@ -2832,6 +2832,51 @@
         },
         "runtime": {
           "bin/placeholder/MP3Updater.Core.Tests.dll": {}
+        }
+      },
+      "Mp3Updater.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mp3Updater.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mp3Updater.DAL.dll": {}
+        }
+      },
+      "Mp3Updater.DAL.Memory/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "MP3FileUpdater.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.0",
+          "Mp3Updater.DAL": "1.0.0",
+          "Mp3Updater.DAL.SQL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mp3Updater.DAL.Memory.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mp3Updater.DAL.Memory.dll": {}
+        }
+      },
+      "Mp3Updater.DAL.SQL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.0",
+          "Mp3Updater.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mp3Updater.DAL.SQL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mp3Updater.DAL.SQL.dll": {}
         }
       },
       "MP3Updater.UI.Console.Host/1.0.0": {
@@ -9075,6 +9120,21 @@
       "path": "../../MP3Updater.Core.Tests/MP3Updater.Core.Tests.csproj",
       "msbuildProject": "../../MP3Updater.Core.Tests/MP3Updater.Core.Tests.csproj"
     },
+    "Mp3Updater.DAL/1.0.0": {
+      "type": "project",
+      "path": "../../DAL/Mp3Updater.DAL/Mp3Updater.DAL.csproj",
+      "msbuildProject": "../../DAL/Mp3Updater.DAL/Mp3Updater.DAL.csproj"
+    },
+    "Mp3Updater.DAL.Memory/1.0.0": {
+      "type": "project",
+      "path": "../../DAL/Mp3Updater.DAL.Memory/Mp3Updater.DAL.Memory.csproj",
+      "msbuildProject": "../../DAL/Mp3Updater.DAL.Memory/Mp3Updater.DAL.Memory.csproj"
+    },
+    "Mp3Updater.DAL.SQL/1.0.0": {
+      "type": "project",
+      "path": "../../DAL/Mp3Updater.DAL.SQL/Mp3Updater.DAL.SQL.csproj",
+      "msbuildProject": "../../DAL/Mp3Updater.DAL.SQL/Mp3Updater.DAL.SQL.csproj"
+    },
     "MP3Updater.UI.Console.Host/1.0.0": {
       "type": "project",
       "path": "../../MP3Updater.UI.Console.Host/MP3Updater.UI.Console.Host.csproj",
@@ -9093,6 +9153,9 @@
       "Microsoft.EntityFrameworkCore >= 3.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.0",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.0",
+      "Mp3Updater.DAL >= 1.0.0",
+      "Mp3Updater.DAL.Memory >= 1.0.0",
+      "Mp3Updater.DAL.SQL >= 1.0.0",
       "Ookii.Dialogs >= 1.0.0",
       "Ookii.Dialogs.Wpf >= 1.1.0",
       "Prism.Core >= 7.2.0.1422",
@@ -9133,6 +9196,15 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
+            "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\DAL\\Mp3Updater.DAL.Memory\\Mp3Updater.DAL.Memory.csproj": {
+              "projectPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\DAL\\Mp3Updater.DAL.Memory\\Mp3Updater.DAL.Memory.csproj"
+            },
+            "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\DAL\\Mp3Updater.DAL.SQL\\Mp3Updater.DAL.SQL.csproj": {
+              "projectPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\DAL\\Mp3Updater.DAL.SQL\\Mp3Updater.DAL.SQL.csproj"
+            },
+            "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\DAL\\Mp3Updater.DAL\\Mp3Updater.DAL.csproj": {
+              "projectPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\DAL\\Mp3Updater.DAL\\Mp3Updater.DAL.csproj"
+            },
             "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\MP3FileUpdater\\MP3FileUpdater.Core.csproj": {
               "projectPath": "C:\\Users\\alexejDosdov\\source\\repos\\MP3FileUpdater\\MP3FileUpdater\\MP3FileUpdater.Core.csproj"
             },

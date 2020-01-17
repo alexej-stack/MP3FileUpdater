@@ -1,5 +1,8 @@
-﻿using Microsoft.WindowsAPICodePack.Dialogs;
+﻿
+using Microsoft.WindowsAPICodePack.Dialogs;
+
 using MP3FileUpdater.Core;
+//using MP3Updater.DAL.Memory;  здесь проблема
 using MP3FileUpdater.UI.WPF.Command;
 using MP3Updater.Core;
 using NLog;
@@ -12,7 +15,7 @@ using System.Windows.Input;
 
 namespace MP3FileUpdater.UI.WPF.Host.ViewModels
 {
-
+    
     class MainViewModel : INotifyPropertyChanged
     {
         private string _sourcePath;
@@ -27,7 +30,7 @@ namespace MP3FileUpdater.UI.WPF.Host.ViewModels
 
         private ObservableCollection<ProgressFiles> _items = new ObservableCollection<ProgressFiles>();
        
-        DatabaseContext db = new DatabaseContext();
+     //   private MemoryRepository memoryRepository =new MemoryRepository();
         private bool _operationStarted;
 
         #region VMmodels        

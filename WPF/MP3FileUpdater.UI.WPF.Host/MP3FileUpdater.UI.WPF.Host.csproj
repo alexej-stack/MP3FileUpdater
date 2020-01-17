@@ -38,6 +38,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DAL\Mp3Updater.DAL.Memory\Mp3Updater.DAL.Memory.csproj" />
+    <ProjectReference Include="..\..\DAL\Mp3Updater.DAL.SQL\Mp3Updater.DAL.SQL.csproj" />
+    <ProjectReference Include="..\..\DAL\Mp3Updater.DAL\Mp3Updater.DAL.csproj" />
     <ProjectReference Include="..\..\MP3FileUpdater\MP3FileUpdater.Core.csproj" />
     <ProjectReference Include="..\..\MP3Updater.UI.Console.Host\MP3Updater.UI.Console.Host.csproj" />
     <ProjectReference Include="..\MP3FileUpdater.UI.WPF.Command\MP3FileUpdater.UI.WPF.Command.csproj" />

@@ -1,10 +1,10 @@
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\bin\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.deps.json
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\bin\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.dll
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\bin\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.pdb
-C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\obj\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.csprojAssemblyReference.cache
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\obj\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.AssemblyInfoInputs.cache
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\obj\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.AssemblyInfo.cs
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\obj\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.dll
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\obj\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.pdb
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\bin\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.runtimeconfig.json
 C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\bin\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.runtimeconfig.dev.json
+C:\Users\alexejDosdov\source\repos\MP3FileUpdater\WPF\MP3FileUpdater.UI.WPF.Command\obj\Debug\netcoreapp3.0\MP3FileUpdater.UI.WPF.Command.csprojAssemblyReference.cache

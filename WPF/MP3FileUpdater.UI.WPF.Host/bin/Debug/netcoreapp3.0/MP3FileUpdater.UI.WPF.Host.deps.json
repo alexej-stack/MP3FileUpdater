@@ -18,6 +18,9 @@
           "Microsoft.EntityFrameworkCore": "3.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.0",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.0",
+          "Mp3Updater.DAL": "1.0.0",
+          "Mp3Updater.DAL.Memory": "1.0.0",
+          "Mp3Updater.DAL.SQL": "1.0.0",
           "Ookii.Dialogs": "1.0.0",
           "Ookii.Dialogs.Wpf": "1.1.0",
           "Prism.Core": "7.2.0.1422",
@@ -1935,6 +1938,36 @@
           "MP3Updater.Core.Tests.dll": {}
         }
       },
+      "Mp3Updater.DAL/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.0"
+        },
+        "runtime": {
+          "Mp3Updater.DAL.dll": {}
+        }
+      },
+      "Mp3Updater.DAL.Memory/1.0.0": {
+        "dependencies": {
+          "MP3FileUpdater.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.0",
+          "Mp3Updater.DAL": "1.0.0",
+          "Mp3Updater.DAL.SQL": "1.0.0"
+        },
+        "runtime": {
+          "Mp3Updater.DAL.Memory.dll": {}
+        }
+      },
+      "Mp3Updater.DAL.SQL/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.0",
+          "Mp3Updater.DAL": "1.0.0"
+        },
+        "runtime": {
+          "Mp3Updater.DAL.SQL.dll": {}
+        }
+      },
       "MP3Updater.UI.Console.Host/1.0.0": {
         "dependencies": {
           "CommandLineParser": "2.6.0",
@@ -3133,6 +3166,21 @@
       "sha512": ""
     },
     "MP3Updater.Core.Tests/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mp3Updater.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mp3Updater.DAL.Memory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mp3Updater.DAL.SQL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
